@@ -19,6 +19,7 @@
 # 스테이지에 도달한 유저가 없는 경우 해당 스테이지의 실패율은 0 으로 정의한다.
 
 
+# 이게 무슨말인지....^_^....다시 풀어보자
 def solution(N, stages):
     answer = []
     total = len(stages)
