@@ -27,3 +27,15 @@ def solution(n, arr1, arr2):
             else:
                 answer[i] += '#'
     return answer
+
+
+# 다른분이 작성한 코드
+def solution(n, arr1, arr2):
+    answer = []
+
+    for i in range(n):       
+        arr1_matrix_row = list(map(int,str(format(arr1[i],'b')).zfill(n)))
+        arr2_matrix_row = list(map(int,str(format(arr2[i],'b')).zfill(n)))
+        matrix_row = ["#" if (arr1_matrix_row[j]) or (arr2_matrix_row[j]) else " "    for j in range(n)]
+        answer.append("".join(matrix_row))
+    return answer
