@@ -27,7 +27,7 @@ def solution(numbers):
     return sum(answer)
 
 
-# 다른분이 작성한 코드
+# 다른분이 작성한 코드 - lambda 이용
 def solution(numbers):
     answer = sum(list(filter(lambda x:x not in numbers, range(0,10))))
 
