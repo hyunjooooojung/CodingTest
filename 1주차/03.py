@@ -7,6 +7,7 @@
 # 제한사항
 # N의 범위 : 100,000,000 이하의 자연수
 
+
 def solution(n):
     answer = 0
     
@@ -14,4 +15,10 @@ def solution(n):
     for i in n_list:
         answer += int(i)
         
+    return answer
+
+
+# 다른 코드
+def solution(n):
+    answer = sum(list(map(int, str(n))))
     return answer
