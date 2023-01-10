@@ -25,3 +25,10 @@ def solution(numbers):
     num = [0,1,2,3,4,5,6,7,8,9]
     answer = list(set(num)-set(numbers))
     return sum(answer)
+
+
+# 다른분이 작성한 코드
+def solution(numbers):
+    answer = sum(list(filter(lambda x:x not in numbers, range(0,10))))
+
+    return answer
