@@ -54,3 +54,13 @@ def solution(s):
         answer = answer.replace(item[0], str(item[1]))
         
     return int(answer)
+
+
+# 다른 분이 작성한 코드
+def solution(s):
+    num_to_word = ["zero","one","two","three","four","five","six","seven","eight","nine"]
+    
+    for i,word in enumerate(num_to_word):
+        s = s.replace(word,str(i))
+    answer = int(s)
+    return answer
