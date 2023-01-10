@@ -14,8 +14,8 @@
 def solution(absolutes, signs):
     answer = 0
     for i in range(len(absolutes)):
-        if signs[i] :
+        if signs[i] :   # signs[i]가 참이면 absolutes[i] 의 실제 정수가 양수
             answer += absolutes[i]
-        else:
+        else:           # 그렇지 않으면 음수
             answer -= absolutes[i]
     return answer
