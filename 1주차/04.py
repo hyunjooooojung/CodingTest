@@ -8,13 +8,20 @@
 
 
 # 처음 작성한 코드
-# def solution(n):
-#     answer = list(str(n))
-#     answer.reverse()
-#     return answer
+def solution(n):
+    answer = list(str(n))
+    answer.reverse()
+    return answer
 
 
-# 수정한 코드
+# 수정한 코드1
+def solution(n):
+    answer = list(map(int, str(n)))
+    answer.reverse()
+    return answer
+
+
+# 수정한 코드2
 def solution(n):
     answer = []
     answer_r = reversed(str(n))
