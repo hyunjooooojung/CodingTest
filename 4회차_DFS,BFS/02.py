@@ -19,19 +19,19 @@ def solution(answers):
     number1 = [1,2,3,4,5]            # 1번 수포자
     number2 = [2,1,2,3,2,4,2,5]      # 2번 수포자
     number3 = [3,3,1,1,2,2,4,4,5,5]  # 3번 수포자
-    score = [0, 0, 0]               
+    score = [0, 0, 0]                # 수포자 1,2,3의 점수를 담은 배열
     result = []
 
-    for idx, answer in enumerate(answers):
-        if answer == number1[idx%len(number1)]:   # 1번 수포자가 찍은 
-            score[0] += 1
-        if answer == number2[idx%len(number2)]:
-            score[1] += 1
-        if answer == number3[idx%len(number3)]:
-            score[2] += 1
+    for idx, answer in enumerate(answers):        # 정답이 담긴 배열 answers를 반복
+        if answer == number1[idx%len(number1)]:   # 현재 문제의 정답과 1번 수포자가 찍은 답이 일치한다면
+            score[0] += 1                         # 1번 수포자의 점수에 1을 더한다.
+        if answer == number2[idx%len(number2)]:   # 현재 문제의 정답과 2번 수포자가 찍은 답이 일치한다면
+            score[1] += 1                         # 2번 수포자의 점수에 1을 더한다.
+        if answer == number3[idx%len(number3)]:   # 현재 문제의 정답과 3번 수포자가 찍은 답이 일치한다면
+            score[2] += 1                         # 3번 수포자의 점수에 1을 더한다.
 
-    for idx, s in enumerate(score):
-        if s == max(score):
+    for idx, s in enumerate(score):               # 점수가 담긴 배열 score안에서 반복
+        if s == max(score):                       # 현재 수포자의 점수와 가장 높은 점수가 같으면
             result.append(idx+1)
 
     return result
