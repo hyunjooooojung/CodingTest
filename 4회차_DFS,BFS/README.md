@@ -58,3 +58,16 @@ queue를 사용하여 구현합니다.
 
 
 참고자료 : https://nareunhagae.tistory.com/17
+
+<br>
+
+
+## 3. 프로그래머스 완전탐색 문제풀이
+
+1. 최소직사각형([https://school.programmers.co.kr/learn/courses/30/lessons/86491](https://school.programmers.co.kr/learn/courses/30/lessons/86491))
+2. 모의고사([https://school.programmers.co.kr/learn/courses/30/lessons/42840](https://school.programmers.co.kr/learn/courses/30/lessons/42840))
+3. 소수찾기([https://school.programmers.co.kr/learn/courses/30/lessons/42839](https://school.programmers.co.kr/learn/courses/30/lessons/42839))
+4. 카펫 ([https://school.programmers.co.kr/learn/courses/30/lessons/42842](https://school.programmers.co.kr/learn/courses/30/lessons/42842))
+5. 피로도([https://school.programmers.co.kr/learn/courses/30/lessons/87946](https://school.programmers.co.kr/learn/courses/30/lessons/87946))
+6. 전력망을 둘로 나누기([https://school.programmers.co.kr/learn/courses/30/lessons/86971](https://school.programmers.co.kr/learn/courses/30/lessons/86971))
+7. 모음사전([https://school.programmers.co.kr/learn/courses/30/lessons/84512](https://school.programmers.co.kr/learn/courses/30/lessons/84512))
