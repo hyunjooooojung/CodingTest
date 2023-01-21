@@ -1,4 +1,10 @@
-## 1. DFS (Depth-First Search)
+<div align=center>
+	<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Programmers&fontSize=90" />
+</div>
+
+# ⏳ 완전탐색 ⏳
+
+## DFS (Depth-First Search)
 - '깊이우선탐색(DFS)'은 가장 깊은 노드까지 내려간 뒤, 더 이상 깊이 갈 곳이 없을 경우 옆으로 이동하여 탐색을 합니다.
 - root 노드(혹은 다른 임의의 노드)에서 시작하여 다른 branch로 넘어가기 전에 해당 branch를 전부 탐색하는 방식을 말합니다.
 
@@ -18,17 +24,17 @@ stack 또는 재귀함수를 사용하여 구현합니다.
 
 
 ### 🔍 예제코드 풀이
-1. 시작 정점을 먼저 stack[0]에 넣어줍니다.
-2. 그리고 스택에서 가장 위(top)에 있는 원소를 하나 꺼냅니다.
-3. 그 원소를 방문표시(visited)하고, 그 원소와 인접한 정점들 중에서 방문하지 않은 정점들을 모두 스택에 넣습니다.
-4. 방문의 우선순위에 따라 인접한 정점이 여러 개면 번호(알파벳이)가 작은 순서대로 방문해야 하므로, 순서에 맞게 스택에 넣어줍니다.
-5. 계속해서 스택의 가장 위에 있는 원소를 꺼내 방문표시하고, 해당 원소와 인접한 원소 중 방문하지 않은 원소들을 모두 스택에 넣어주는 과정을 반복합니다.
+    1. 시작 정점을 먼저 stack[0]에 넣어줍니다.
+    2. 그리고 스택에서 가장 위(top)에 있는 원소를 하나 꺼냅니다.
+    3. 그 원소를 방문표시(visited)하고, 그 원소와 인접한 정점들 중에서 방문하지 않은 정점들을 모두 스택에 넣습니다.
+    4. 방문의 우선순위에 따라 인접한 정점이 여러 개면 번호(알파벳이)가 작은 순서대로 방문해야 하므로, 순서에 맞게 스택에 넣어줍니다.
+    5. 계속해서 스택의 가장 위에 있는 원소를 꺼내 방문표시하고, 해당 원소와 인접한 원소 중 방문하지 않은 원소들을 모두 스택에 넣어주는 과정을 반복합니다.
 
 
 <br>
 
 
-## 2. BFS (Breath-First Search)
+## BFS (Breath-First Search)
 - '너비우선탐색(BFS)'는 root노드에서 인접한 노드를 먼저 탐색하는 방법입니다.
 - 시작 정점으로부터 가장 가까운 정점을 먼저 방문하고, 멀리 떨어져 있는 정점은 나중에 방문하는 식으로 탐색하는 방식을 말합니다.
 
@@ -48,10 +54,10 @@ queue를 사용하여 구현합니다.
 
 
 ### 🔍 예제코드 풀이
-1. 시작 정점을 먼저 queue[0]에 추가해 줍니다.
-2. queue에서 제일 앞에 있는 원소를 하나 꺼냅니다.(pop)
-3. 그 원소를 방문표시(visited)하고, 그 원소와 인접한 정점들 중 방문완료되지 않았고, queue에 추가되지 않은 인접한 원소들을 queue에 추가해줍니다.
-4. queue가 빌 때까지 반복합니다.
+    1. 시작 정점을 먼저 queue[0]에 추가해 줍니다.
+    2. queue에서 제일 앞에 있는 원소를 하나 꺼냅니다.(pop)
+    3. 그 원소를 방문표시(visited)하고, 그 원소와 인접한 정점들 중 방문완료되지 않았고, queue에 추가되지 않은 인접한 원소들을 queue에 추가해줍니다.
+    4. queue가 빌 때까지 반복합니다.
 
 
 <br>
@@ -60,14 +66,72 @@ queue를 사용하여 구현합니다.
 참고자료 : https://nareunhagae.tistory.com/17
 
 <br>
+<hr>
+<br>
 
 
-## 3. 프로그래머스 완전탐색 문제풀이
+## 프로그래머스 완전탐색 문제풀이
 
-1. 최소직사각형([https://school.programmers.co.kr/learn/courses/30/lessons/86491](https://school.programmers.co.kr/learn/courses/30/lessons/86491))
-2. 모의고사([https://school.programmers.co.kr/learn/courses/30/lessons/42840](https://school.programmers.co.kr/learn/courses/30/lessons/42840))
-3. 소수찾기([https://school.programmers.co.kr/learn/courses/30/lessons/42839](https://school.programmers.co.kr/learn/courses/30/lessons/42839))
-4. 카펫 ([https://school.programmers.co.kr/learn/courses/30/lessons/42842](https://school.programmers.co.kr/learn/courses/30/lessons/42842))
-5. 피로도([https://school.programmers.co.kr/learn/courses/30/lessons/87946](https://school.programmers.co.kr/learn/courses/30/lessons/87946))
-6. 전력망을 둘로 나누기([https://school.programmers.co.kr/learn/courses/30/lessons/86971](https://school.programmers.co.kr/learn/courses/30/lessons/86971))
-7. 모음사전([https://school.programmers.co.kr/learn/courses/30/lessons/84512](https://school.programmers.co.kr/learn/courses/30/lessons/84512))
+### 1. 최소직사각형([https://school.programmers.co.kr/learn/courses/30/lessons/86491](https://school.programmers.co.kr/learn/courses/30/lessons/86491))
+### 풀이
+    1. 명함 지갑의 가로, 세로 길이 후보 list 변수 w, h 생성한다
+    2. 주어진 명함들을 for 문을 돌면서 더 큰 값을 w, 작은 값을 h에 저장한다
+    3. 각 w, h 리스트에서 가장 큰 값을 곱한다
+    
+<br>
+
+### 2. 모의고사([https://school.programmers.co.kr/learn/courses/30/lessons/42840](https://school.programmers.co.kr/learn/courses/30/lessons/42840))
+    1. number1 : 1번 수포자 / number2 : 2번 수포자 / number3 : 3번 수포자
+    2. score : 수포자 1,2,3의 점수를 담은 배열
+    3. 정답이 담긴 배열 answers를 반복
+    4. 현재 문제의 정답과 1번 수포자가 찍은 답이 일치한다면
+    5. 1번 수포자의 점수에 1을 더한다.
+    6. 현재 문제의 정답과 2번 수포자가 찍은 답이 일치한다면
+    7. 2번 수포자의 점수에 1을 더한다.
+    8. 현재 문제의 정답과 3번 수포자가 찍은 답이 일치한다면
+    9. 3번 수포자의 점수에 1을 더한다.
+    10. 점수가 담긴 배열 score안에서 반복
+    11. 현재 수포자의 점수와 가장 높은 점수가 같으면
+     
+<br>
+
+
+### 3. 소수찾기([https://school.programmers.co.kr/learn/courses/30/lessons/42839](https://school.programmers.co.kr/learn/courses/30/lessons/42839))
+    1. is_prime_number -> 소수찾기 함수 
+    2. answer: 소수의 갯수를 담는 변수 / number : 입력받은 문자열을 리스트로 변환                                                                                         3. 1부터 number의 개수만큼 모든 조합의 수를 구한다(순열 이용)
+    4. current_num : 문자열을 합친다.
+    5. current_num의 시작이 0인 경우
+    6. current_num을 int로 변환해 소수인지 판별
+    
+<br>
+
+
+### 4. 카펫 ([https://school.programmers.co.kr/learn/courses/30/lessons/42842](https://school.programmers.co.kr/learn/courses/30/lessons/42842))
+    1. 전체 격자 개수 total
+    2. 가로 or 세로 : i or j / yellow가 1 이상이려면 가로의 길이는 3이상이어야 함.
+    3. 전체 격자 개수를 i로 나눴을 때 나누어 떨어지면 = 약수이면
+    4. i * j == total 이니까 j = total // i
+    5. 가로 길이가 세로길이보다 같거나 길기 때문에 내림차순 정렬!
+    
+<br>
+
+
+### 5. 피로도([https://school.programmers.co.kr/learn/courses/30/lessons/87946](https://school.programmers.co.kr/learn/courses/30/lessons/87946))
+    1. 
+    2. 
+    3. 
+    
+<br>
+
+### 6. 전력망을 둘로 나누기([https://school.programmers.co.kr/learn/courses/30/lessons/86971](https://school.programmers.co.kr/learn/courses/30/lessons/86971))
+    1. 
+    2. 
+    3. 
+    
+<br>
+
+
+### 7. 모음사전([https://school.programmers.co.kr/learn/courses/30/lessons/84512](https://school.programmers.co.kr/learn/courses/30/lessons/84512))
+    1. 
+    2. 
+    3. 
