@@ -117,9 +117,9 @@ queue를 사용하여 구현합니다.
 
 
 ### 5. 피로도([https://school.programmers.co.kr/learn/courses/30/lessons/87946](https://school.programmers.co.kr/learn/courses/30/lessons/87946))
-    1. 
-    2. 
-    3. 
+    1. 순열을 이용해서 하루에 탐험할 수 있는 던전의 경우의 수를 모두 구한 후 그 안에서 반복
+    2. 던전의 경우의 수 안에서 피로도 계산 (a = 최소 필요 피로도, b = 소모 피로도)
+    3. 현재 피로도와 최소 필요 피로도, 소모 피로도 비교해서 최댓값 구하기
     
 <br>
 
@@ -132,6 +132,7 @@ queue를 사용하여 구현합니다.
 
 
 ### 7. 모음사전([https://school.programmers.co.kr/learn/courses/30/lessons/84512](https://school.programmers.co.kr/learn/courses/30/lessons/84512))
-    1. 
-    2. 
-    3. 
+    1. word의 길이는 1이상 5이하 : range(1, 6)
+    2. 중복 순열 product 를 사용해서 단어를 조합하고, 조합한 단어를 join으로 붙혀준다.
+    3. 만든 단어들을 오름차순으로 정렬해준다.
+    4. index +1 return
