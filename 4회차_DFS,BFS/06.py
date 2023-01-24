@@ -15,10 +15,50 @@
 # 전력망 네트워크가 하나의 트리 형태가 아닌 경우는 입력으로 주어지지 않습니다.
 
 
+from collections import deque
 
+
+def bfs(start, visited, graph):
+    queue = deque([start])
+    result = 1
+    visited[start] = True
+    while queue:
+        now = queue.popleft()
+        
+        for i in graph[now]:
+            if visited[i] == False:
+                result += 1
+                queue.append(i)
+                visited[i] = True
+                
+    return result
         
 
 def solution(n, wires):
-    answer = 0
+    answer = n
+    graph = [[] for i in range(n+1)]
     
+    for v1,v2 in wires:
+        graph[v1].append(v2)
+        graph[v2].append(v1)
+            
+    for start,not_visit in wires:
+        visitied = [False]*(n+1)
+        visitied[not_visit] = True
+        result = bfs(start,visitied,graph)
+        if abs(result - (n-result)) < answer:
+            answer = abs(result - (n-result))
+        
+    return answer
+
+
+
+
+# set을 활용한 다른 풀이
+def solution(n, wires):
+    answer = n
+    for sub in (wires[i+1:] + wires[:i] for i in range(len(wires))):
+        s = set(sub[0])
+        [s.update(v) for _ in sub for v in sub if set(v) & s]
+        answer = min(answer, abs(2 * len(s) - n))
     return answer
