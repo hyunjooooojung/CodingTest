@@ -124,9 +124,8 @@ queue를 사용하여 구현합니다.
 <br>
 
 ### 6. 전력망을 둘로 나누기([https://school.programmers.co.kr/learn/courses/30/lessons/86971](https://school.programmers.co.kr/learn/courses/30/lessons/86971))
-    1. 
-    2. 
-    3. 
+    1. bfs를 활용해야하는 문제
+    2. tlqk,,,
     
 <br>
 
