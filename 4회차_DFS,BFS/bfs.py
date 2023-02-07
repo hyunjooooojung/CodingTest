@@ -15,7 +15,7 @@ bfsGraph = {
 }
 
 
-def bfs(graph, start_node):
+def bfs(bfsGraph, start_node):
     visited = [] # 방문한 노드를 담을 배열
     queue = [] # 방문 예정인 노드를 담을 배열
 
@@ -26,7 +26,7 @@ def bfs(graph, start_node):
 
         if node not in visited: # 방문한 노드가 아니라면
             visited.append(node) # visited 배열에 추가
-            queue.extend(graph[node]) # 해당 노드의 자식 노드로 추가
+            queue.extend(bfsGraph[node]) # 해당 노드의 자식 노드로 추가
     
     print("bfs - ", visited)
     return visited
@@ -40,7 +40,7 @@ bfs(bfsGraph, 'G')
 # deque 사용
 from collections import deque
 
-def bfs_queue(graph, node):
+def bfs_queue(bfsGraph, node):
     visited = []
     queue=deque()
 
@@ -51,7 +51,7 @@ def bfs_queue(graph, node):
         if node not in visited:                 # 방문한 노드인지를 확인. 노드가 아닐 경우에만 근접 노드를 Queue에 추가
             visited.append(node)
             print(node, visited, queue)
-            queue.extendleft(graph[node])
+            queue.extendleft(bfsGraph[node])
 
     return visited       
     
@@ -71,3 +71,38 @@ bfs_queue(bfsGraph, "A")
     L ['A', 'B', 'H', 'C', 'I', 'J', 'M', 'D', 'K', 'E', 'G', 'L'] deque(['D', 'F', 'D'])
     F ['A', 'B', 'H', 'C', 'I', 'J', 'M', 'D', 'K', 'E', 'G', 'L', 'F'] deque(['K', 'D'])
 '''
+
+
+# 위의 그래프를 예시로 삼아서 인접 리스트 방식으로 표현했습니다!
+graph = {
+    1: [2, 3, 4],
+    2: [1, 5],
+    3: [1, 6, 7],
+    4: [1, 8],
+    5: [2, 9],
+    6: [3, 10],
+    7: [3],
+    8: [4],
+    9: [5],
+    10: [6]
+}
+
+
+
+def bfs_queue2(graph, start_node):
+    queue = [start_node]
+    visited = []
+
+    while queue:
+        current_node = queue.pop(0)
+        visited.append(current_node)
+        for adjacent_node in graph[current_node]:
+            if adjacent_node not in visited:
+                queue.append(adjacent_node)
+
+    return visited
+
+
+
+print(bfs_queue2(graph, 1))  # 1 이 시작노드입니다!
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 이 출력되어야 합니다!
