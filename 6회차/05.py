@@ -28,6 +28,8 @@
 # room_number 배열은 모든 고객이 방을 배정받을 수 있는 경우만 입력으로 주어집니다.
 # 예를 들어, k = 5, room_number = [5, 5] 와 같은 경우는 방을 배정받지 못하는 고객이 발생하므로 이런 경우는 입력으로 주어지지 않습니다.
 
+# 해설 참고하기 : https://tech.kakao.com/2020/04/01/2019-internship-test/
+
 
 import sys
 sys.setrecursionlimit(10000000) # 설정해주지 않으면 재귀가 많이 일어나면서 런타임에러 등이 나타날 수 있다.
