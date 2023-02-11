@@ -1,4 +1,4 @@
-# 연속합(https://www.acmicpc.net/problem/1912)
+# 1912번 : 연속합(https://www.acmicpc.net/problem/1912)
 
 # 1. 문제
 # n개의 정수로 이루어진 임의의 수열이 주어진다. 
